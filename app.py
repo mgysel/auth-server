@@ -58,8 +58,8 @@ def login():
     else:
         raise InputError('Email or Password is Invalid')
 
-@app.route('/test', methods=['GET'])
+@app.route('/', methods=['GET'])
 def test():
     return "Hello World!!!"
 
-#app.run(port='8088', debug=True)
+#app.run(port='8089', debug=True)
