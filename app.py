@@ -1,10 +1,17 @@
 from flask import Flask, request
 from json import dumps
-from error import InputError
 
 app = Flask(__name__)
 
 USER_DATA = []
+
+class AccessError(HTTPException):
+    code = 400
+    message = 'No message specified'
+
+class InputError(HTTPException):
+    code = 400
+    message = 'No message specified'
 
 def defaultHandler(error):
     '''
