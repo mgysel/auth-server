@@ -1,4 +1,6 @@
-from flask import Flask
+from flask import Flask, request
+from json import dumps
+from error import InputError
 
 app = Flask(__name__)
 
@@ -51,3 +53,5 @@ def login():
 @app.route('/test', methods=['GET'])
 def test():
     return "Hello World!!!"
+
+app.run(port='8087', debug=True)
