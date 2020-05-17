@@ -1,9 +1,9 @@
-from flask import Flask, request
-from json import dumps
-from werkzeug.exceptions import HTTPException
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def test():
     return "Hello World!!!"
+
+app.run(debug=True, port=8129)
